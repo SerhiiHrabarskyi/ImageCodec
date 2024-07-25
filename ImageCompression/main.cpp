@@ -19,11 +19,11 @@ int main(int argc, char *argv[])
     ImageCodec imageCodec;
     engine.rootContext()->setContextProperty("imageCodec", &imageCodec);
 
-    ImageProvider<ImageReader> *imageProvider = new ImageProvider(&imageReader);
-    engine.addImageProvider("imageProvider", imageProvider);
+    ImageProvider<ImageReader> *imageProviderCompressing = new ImageProvider(&imageReader);
+    engine.addImageProvider("imageProviderCompressing", imageProviderCompressing);
 
-    ImageProvider<ImageCodec> *imageProvider1 = new ImageProvider(&imageCodec);
-    engine.addImageProvider("imageProvider1", imageProvider1);
+    ImageProvider<ImageCodec> *imageProviderDecompressing = new ImageProvider(&imageCodec);
+    engine.addImageProvider("imageProviderDecompressing", imageProviderDecompressing);
 
     QQuickStyle::setStyle("Basic");
 

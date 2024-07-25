@@ -49,7 +49,7 @@ ApplicationWindow {
                         target: imageReader
                         onImageChanged: {
                             image.source = ""
-                            image.source = "image://imageProvider/"
+                            image.source = "image://imageProviderCompressing/"
                         }
                     }
                 }
@@ -93,7 +93,7 @@ ApplicationWindow {
                         target: imageCodec
                         onImageChanged: {
                             decompressedimage.source = ""
-                            decompressedimage.source = "image://imageProvider1/"
+                            decompressedimage.source = "image://imageProviderDecompressing/"
                         }
                     }
                 }

@@ -30,7 +30,7 @@ void ImageCodec::decompressImage(const QString& imagePath)
 {
     auto rawData = ImgCodec::decode(imagePath.toUtf8().toStdString());
 
-    m_image = QImage(rawData.data.data(), rawData.width, rawData.height, QImage::Format_Grayscale8);
+    m_image = QImage(rawData.data.data(), rawData.width, rawData.height, QImage::Format_Grayscale8).copy();
 
     emit imageChanged();
 }
